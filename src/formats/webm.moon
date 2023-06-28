@@ -60,6 +60,11 @@ class WebmVP9QSV extends Format
 		@outputExtension = "webm"
 		@acceptsBitrate = false
 
+	getFlags: =>
+		{
+			"--preset:v 1",
+		}
+
 formats["webm-vp9-qsv"] = WebmVP9QSV!
 
 class WebmAV1QSV extends Format
@@ -70,5 +75,10 @@ class WebmAV1QSV extends Format
 		@audioCodec = "libopus"
 		@outputExtension = "webm"
 		@acceptsBitrate = false
+
+	getFlags: =>
+		{
+			"--preset:v 1",
+		}
 
 formats["webm-av1-qsv"] = WebmAV1QSV!

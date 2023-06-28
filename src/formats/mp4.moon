@@ -20,6 +20,8 @@ class MP4NVENC extends Format
 
 formats["mp4-nvenc"] = MP4NVENC!
 
+-- TODO: Set gpu encoders to slowest preset
+
 class MP4X264QSV extends Format
 	new: =>
 		@displayName = "MP4 (h264-QSV/AAC)"
@@ -28,6 +30,11 @@ class MP4X264QSV extends Format
 		@audioCodec = "aac"
 		@outputExtension = "mp4"
 		@acceptsBitrate = true
+
+	getFlags: =>
+		{
+			"--preset:v 1",
+		}
 
 formats["mp4-x264QSV"] = MP4X264QSV!
 
@@ -39,5 +46,10 @@ class MP4X264QSVOPUS extends Format
 		@audioCodec = "libopus"
 		@outputExtension = "mp4"
 		@acceptsBitrate = true
+
+	getFlags: =>
+		{
+			"--preset:v 1",
+		}
 
 formats["mp4-x264QSV_opus"] = MP4X264QSVOPUS!
