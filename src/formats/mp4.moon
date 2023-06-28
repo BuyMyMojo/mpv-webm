@@ -29,6 +29,9 @@ class MP4X264QSV extends Format
 		@outputExtension = "mp4"
 		@acceptsBitrate = true
 
+	getFlags: => 
+	{"--preset=1"}
+
 formats["mp4-x264QSV"] = MP4X264QSV!
 
 class MP4X264QSVOPUS extends Format
@@ -39,5 +42,8 @@ class MP4X264QSVOPUS extends Format
 		@audioCodec = "libopus"
 		@outputExtension = "mp4"
 		@acceptsBitrate = true
+
+	getFlags: => 
+	{"--preset=1"}
 
 formats["mp4-x264QSV_opus"] = MP4X264QSVOPUS!
