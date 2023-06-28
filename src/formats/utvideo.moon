@@ -8,7 +8,7 @@ class UtVideo420 extends Format
 		@acceptsBitrate = false
 
 	getPostFilters: =>
-		{"format=yuv444p"}
+		{"format=yuv420p"}
 
 formats["utvideo-yuv420p"] = UtVideo420!
 

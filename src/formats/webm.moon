@@ -55,7 +55,7 @@ class WebmVP9QSV extends Format
 	new: =>
 		@displayName = "WebM (VP9_QSV)"
 		@supportsTwopass = false
-		@videoCodec = "vp9-qsv"
+		@videoCodec = "vp9_qsv"
 		@audioCodec = "libopus"
 		@outputExtension = "webm"
 		@acceptsBitrate = true
@@ -66,7 +66,7 @@ class WebmAV1QSV extends Format
 	new: =>
 		@displayName = "WebM (AV1_QSV)"
 		@supportsTwopass = false
-		@videoCodec = "av1-qsv"
+		@videoCodec = "av1_qsv"
 		@audioCodec = "libopus"
 		@outputExtension = "webm"
 		@acceptsBitrate = true

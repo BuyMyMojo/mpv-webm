@@ -13,6 +13,7 @@ SOURCES += src/formats/utvideo.moon
 SOURCES += src/formats/webm.moon
 SOURCES += src/formats/mp4.moon
 SOURCES += src/formats/mp3.moon
+SOURCES += src/formats/ogg.moon
 SOURCES += src/formats/gif.moon
 SOURCES += src/Page.moon
 SOURCES += src/EncodeWithProgress.moon

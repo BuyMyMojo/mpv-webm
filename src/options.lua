@@ -45,11 +45,18 @@ local options = {
 	-- Currently we have:
 	-- webm-vp8 (libvpx/libvorbis)
 	-- webm-vp9 (libvpx-vp9/libopus)
+	-- webm-vp9-qsv (vp9_qsv/libopus)
+	-- webm-vp9-qsv (av1_qsv/libopus)
 	-- mp4 (h264/AAC)
 	-- mp4-nvenc (h264-NVENC/AAC)
+	-- mp4-x264QSV_aac (h264_QSV/AAC)
+	-- mp4-x264QSV_opus (h264_QSV/libopus)
 	-- raw (rawvideo/pcm_s16le).
-	-- utvideo (utvideo/pcm_s16le)
+	-- utvideo-yuv420p (utvideo/pcm_s16le)
+	-- utvideo-yuv422p (utvideo/pcm_s16le)
+	-- utvideo-yuv444p (utvideo/pcm_s16le)
 	-- mp3 (libmp3lame)
+	-- ogg (libopus)
 	-- and gif
 	output_format = "webm-vp8",
 	twopass = true,
