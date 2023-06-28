@@ -49,3 +49,26 @@ class WebmVP9 extends Format
 		}
 
 formats["webm-vp9"] = WebmVP9!
+
+
+class WebmVP9QSV extends Format
+	new: =>
+		@displayName = "WebM (VP9_QSV)"
+		@supportsTwopass = false
+		@videoCodec = "vp9-qsv"
+		@audioCodec = "libopus"
+		@outputExtension = "webm"
+		@acceptsBitrate = true
+
+formats["webm-vp9-qsv"] = WebmVP9QSV!
+
+class WebmAV1QSV extends Format
+	new: =>
+		@displayName = "WebM (AV1_QSV)"
+		@supportsTwopass = false
+		@videoCodec = "av1-qsv"
+		@audioCodec = "libopus"
+		@outputExtension = "webm"
+		@acceptsBitrate = true
+
+formats["webm-av1-qsv"] = WebmAV1QSV!
