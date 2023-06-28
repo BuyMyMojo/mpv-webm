@@ -26,7 +26,7 @@ class UtVideo extends Format
 --				msg.info("Warning, unknown colorspace #{csp} detected, using bt.601.")
 --				return "bt601"
 --
---	getPostFilters: =>
---		{"format=yuv444p", "lavfi-scale=in_color_matrix=" .. self\getColorspace!, "format=yuv444p"}
+	getPostFilters: =>
+		{"format=yuv444p"}
 
 formats["utvideo"] = UtVideo!

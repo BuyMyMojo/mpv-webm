@@ -9,6 +9,7 @@ SOURCES += src/video_to_screen.moon
 SOURCES += src/vp8_twopass_log_patcher.moon
 SOURCES += src/formats/base.moon
 SOURCES += src/formats/rawvideo.moon
+SOURCES += src/formats/utvideo.moon
 SOURCES += src/formats/webm.moon
 SOURCES += src/formats/mp4.moon
 SOURCES += src/formats/mp3.moon
