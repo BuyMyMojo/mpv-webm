@@ -20,7 +20,7 @@ class MP4NVENC extends Format
 
 formats["mp4-nvenc"] = MP4NVENC!
 
-class MP4X264QSVAAC extends Format
+class MP4X264QSV extends Format
 	new: =>
 		@displayName = "MP4 (h264-QSV/AAC)"
 		@supportsTwopass = true
@@ -29,7 +29,7 @@ class MP4X264QSVAAC extends Format
 		@outputExtension = "mp4"
 		@acceptsBitrate = true
 
-formats["mp4-x264QSV_aac"] = MP4X264QSVAAC!
+formats["mp4-x264QSV"] = MP4X264QSV!
 
 class MP4X264QSVOPUS extends Format
 	new: =>
