@@ -62,7 +62,7 @@ class WebmVP9QSV extends Format
 
 	getFlags: =>
 		{
-			"--preset:v=1",
+			"--ovcopts=preset=1",
 		}
 
 formats["webm-vp9-qsv"] = WebmVP9QSV!
@@ -78,7 +78,7 @@ class WebmAV1QSV extends Format
 
 	getFlags: =>
 		{
-			"--preset:v=1",
+			"--ovcopts=preset=1",
 		}
 
 formats["webm-av1-qsv"] = WebmAV1QSV!
