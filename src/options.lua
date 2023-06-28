@@ -48,6 +48,7 @@ local options = {
 	-- mp4 (h264/AAC)
 	-- mp4-nvenc (h264-NVENC/AAC)
 	-- raw (rawvideo/pcm_s16le).
+	-- utvideo (utvideo/pcm_s16le)
 	-- mp3 (libmp3lame)
 	-- and gif
 	output_format = "webm-vp8",
