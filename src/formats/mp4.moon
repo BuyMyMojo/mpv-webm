@@ -33,7 +33,7 @@ class MP4X264QSV extends Format
 
 	getFlags: =>
 		{
-			"--preset:v 1",
+			"--preset:v=1",
 		}
 
 formats["mp4-x264QSV"] = MP4X264QSV!
@@ -49,7 +49,7 @@ class MP4X264QSVOPUS extends Format
 
 	getFlags: =>
 		{
-			"--preset:v 1",
+			"--preset:v=1",
 		}
 
 formats["mp4-x264QSV_opus"] = MP4X264QSVOPUS!
