@@ -45,6 +45,7 @@ class HEVCQSV extends Format
 	getFlags: =>
 		{
 			"--ovcopts-add=preset=1",
+			"--ovcopts-add=tier=256",
 			"--ovcopts-add=movflags=+faststart",
 		}
 

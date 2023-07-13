@@ -84,6 +84,7 @@ class AVCQSV extends Format
 	getFlags: =>
 		{
 			"--ovcopts-add=preset=1",
+			"--ovcopts-add=profile=100",
 			"--ovcopts-add=movflags=+faststart",
 		}
 
@@ -101,6 +102,7 @@ class AVCQSVOPUS extends Format
 	getFlags: =>
 		{
 			"--ovcopts-add=preset=1",
+			"--ovcopts-add=profile=100",
 			"--ovcopts-add=movflags=+faststart",
 		}
 
