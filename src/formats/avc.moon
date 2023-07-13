@@ -10,7 +10,9 @@ class AVC extends Format
 	getFlags: =>
 		{
 			"--ovcopts-add=threads=#{options.threads}",
-			"--ovcopts-add=preset=veryslow"
+			"--ovcopts-add=preset=veryslow",
+			"--ovcopts-add=profile=high",
+			"--ovcopts-add=movflags=+faststart",
 		}
 
 formats["avc"] = AVC!
@@ -27,6 +29,8 @@ class AVCNVENC extends Format
 	getFlags: =>
 		{
 			"--ovcopts-add=preset=18",
+			"--ovcopts-add=profile=2",
+			"--ovcopts-add=movflags=+faststart",
 		}
 
 formats["avc-nvenc"] = AVCNVENC!
@@ -43,6 +47,7 @@ class AVCQSV extends Format
 	getFlags: =>
 		{
 			"--ovcopts-add=preset=1",
+			"--ovcopts-add=movflags=+faststart",
 		}
 
 formats["avc-qsv"] = AVCQSV!
@@ -59,6 +64,7 @@ class AVCQSVOPUS extends Format
 	getFlags: =>
 		{
 			"--ovcopts-add=preset=1",
+			"--ovcopts-add=movflags=+faststart",
 		}
 
 formats["avc-qsv-opus"] = AVCQSVOPUS!

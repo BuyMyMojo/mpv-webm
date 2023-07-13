@@ -10,6 +10,7 @@ class AV1 extends Format
 	getFlags: =>
 		{
 			"--ovcopts-add=threads=#{options.threads}"
+			"--ovcopts-add=movflags=+faststart",
 		}
 
 formats["av1"] = AV1!
@@ -26,6 +27,7 @@ class AV1QSV extends Format
 	getFlags: =>
 		{
 			"--ovcopts-add=preset=1",
+			"--ovcopts-add=movflags=+faststart",
 		}
 
 formats["av1-qsv"] = AV1QSV!
