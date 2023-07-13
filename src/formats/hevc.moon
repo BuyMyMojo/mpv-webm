@@ -11,6 +11,7 @@ class HEVC extends Format
 		{
 			"--ovcopts-add=threads=#{options.threads}",
 			"--ovcopts-add=preset=slow",
+			"--ovcopts-add=movflags=+faststart",
 		}
 
 formats["hevc"] = HEVC!
@@ -27,6 +28,7 @@ class HEVCNVENC extends Format
 	getFlags: =>
 		{
 			"--ovcopts-add=preset=18",
+			"--ovcopts-add=movflags=+faststart",
 		}
 
 formats["hevc-nvenc"] = HEVCNVENC!
