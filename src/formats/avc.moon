@@ -1,28 +1,39 @@
-class MP4 extends Format
+class AVC extends Format
 	new: =>
-		@displayName = "MP4 (h264/AAC)"
+		@displayName = "AVC (h264/AAC)"
 		@supportsTwopass = true
 		@videoCodec = "libx264"
 		@audioCodec = "aac"
 		@outputExtension = "mp4"
 		@acceptsBitrate = true
 
-formats["mp4"] = MP4!
+	getFlags: =>
+		{
+			"--ovcopts-add=threads=#{options.threads}",
+			"--ovcopts-add=preset=veryslow"
+		}
 
-class MP4NVENC extends Format
+formats["avc"] = AVC!
+
+class AVCNVENC extends Format
 	new: =>
-		@displayName = "MP4 (h264-NVENC/AAC)"
+		@displayName = "AVC (h264-NVENC/AAC)"
 		@supportsTwopass = true
 		@videoCodec = "h264_nvenc"
 		@audioCodec = "aac"
 		@outputExtension = "mp4"
 		@acceptsBitrate = true
 
-formats["mp4-nvenc"] = MP4NVENC!
+	getFlags: =>
+		{
+			"--ovcopts-add=preset=p7",
+		}
+
+formats["avc-nvenc"] = AVCNVENC!
 
 -- TODO: Set gpu encoders to slowest preset
 
-class MP4X264QSV extends Format
+class AVCQSV extends Format
 	new: =>
 		@displayName = "MP4 (h264-QSV/AAC)"
 		@supportsTwopass = false
@@ -33,12 +44,12 @@ class MP4X264QSV extends Format
 
 	getFlags: =>
 		{
-			"--ovcopts=preset=1",
+			"--ovcopts-add=preset=1",
 		}
 
-formats["mp4-x264QSV"] = MP4X264QSV!
+formats["avc-qsv"] = AVCQSV!
 
-class MP4X264QSVOPUS extends Format
+class AVCQSVOPUS extends Format
 	new: =>
 		@displayName = "MP4 (h264-QSV/OPUS)"
 		@supportsTwopass = false
@@ -49,7 +60,7 @@ class MP4X264QSVOPUS extends Format
 
 	getFlags: =>
 		{
-			"--ovcopts=preset=1",
+			"--ovcopts-add=preset=1",
 		}
 
-formats["mp4-x264QSV_opus"] = MP4X264QSVOPUS!
+formats["avc-qsv-opus"] = AVCQSVOPUS!

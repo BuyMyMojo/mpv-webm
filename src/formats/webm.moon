@@ -25,7 +25,7 @@ class WebmVP8 extends Format
 
 	getFlags: =>
 		{
-			"--ovcopts-add=threads=#{options.libvpx_threads}",
+			"--ovcopts-add=threads=#{options.threads}",
 			"--ovcopts-add=auto-alt-ref=1",
 			"--ovcopts-add=lag-in-frames=25",
 			"--ovcopts-add=quality=good",
@@ -45,7 +45,7 @@ class WebmVP9 extends Format
 
 	getFlags: =>
 		{
-			"--ovcopts-add=threads=#{options.libvpx_threads}"
+			"--ovcopts-add=threads=#{options.threads}"
 		}
 
 formats["webm-vp9"] = WebmVP9!
@@ -62,23 +62,7 @@ class WebmVP9QSV extends Format
 
 	getFlags: =>
 		{
-			"--ovcopts=preset=1",
+			"--ovcopts-add=preset=1",
 		}
 
-formats["webm-vp9-qsv"] = WebmVP9QSV!
-
-class WebmAV1QSV extends Format
-	new: =>
-		@displayName = "WebM (AV1_QSV)"
-		@supportsTwopass = false
-		@videoCodec = "av1_qsv"
-		@audioCodec = "libopus"
-		@outputExtension = "webm"
-		@acceptsBitrate = false
-
-	getFlags: =>
-		{
-			"--ovcopts=preset=1",
-		}
-
-formats["webm-av1-qsv"] = WebmAV1QSV!
+formats["vp9-qsv"] = WebmVP9QSV!
