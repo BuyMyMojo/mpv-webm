@@ -10,12 +10,49 @@ class AVC extends Format
 	getFlags: =>
 		{
 			"--ovcopts-add=threads=#{options.threads}",
-			"--ovcopts-add=preset=veryslow",
 			"--ovcopts-add=profile=high",
 			"--ovcopts-add=movflags=+faststart",
 		}
 
 formats["avc"] = AVC!
+
+class AVCSLOW extends Format
+	new: =>
+		@displayName = "AVC-slow (x264/AAC)"
+		@supportsTwopass = true
+		@videoCodec = "libx264"
+		@audioCodec = "aac"
+		@outputExtension = "mp4"
+		@acceptsBitrate = true
+
+	getFlags: =>
+		{
+			"--ovcopts-add=threads=#{options.threads}",
+			"--ovcopts-add=preset=slow",
+			"--ovcopts-add=profile=high",
+			"--ovcopts-add=movflags=+faststart",
+		}
+
+formats["avc-slow"] = AVCSLOW!
+
+class AVCVERYSLOW extends Format
+	new: =>
+		@displayName = "AVC-veryslow (x264/AAC)"
+		@supportsTwopass = true
+		@videoCodec = "libx264"
+		@audioCodec = "aac"
+		@outputExtension = "mp4"
+		@acceptsBitrate = true
+
+	getFlags: =>
+		{
+			"--ovcopts-add=threads=#{options.threads}",
+			"--ovcopts-add=preset=veryslow",
+			"--ovcopts-add=profile=high",
+			"--ovcopts-add=movflags=+faststart",
+		}
+
+formats["avc-veryslow"] = AVCVERYSLOW!
 
 class AVCNVENC extends Format
 	new: =>

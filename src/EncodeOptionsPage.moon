@@ -161,6 +161,8 @@ class EncodeOptionsPage extends Page
 			"av1",
 			"av1-qsv",
 			"avc",
+			"avc-slow",
+			"avc-veryslow",
 			"avc-qsv",
 			"avc-qsv-opus",
 			"avc-nvenc",
