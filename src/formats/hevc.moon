@@ -10,7 +10,7 @@ class HEVC extends Format
 	getFlags: =>
 		{
 			"--ovcopts-add=threads=#{options.threads}",
-			"--ovcopts-add=preset=slow"
+			"--ovcopts-add=preset=slow",
 		}
 
 formats["hevc"] = HEVC!
