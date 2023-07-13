@@ -173,8 +173,9 @@ class EncodeOptionsPage extends Page
 			"utvideo-yuv420p",
 			"utvideo-yuv422p",
 			"utvideo-yuv444p",
-			"mp3",
 			"ogg",
+			"aac",
+			"mp3",
 			"gif"
 		}
 
