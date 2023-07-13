@@ -1,6 +1,6 @@
 class WebmVP8 extends Format
 	new: =>
-		@displayName = "WebM"
+		@displayName = "WebM (VP8)"
 		@supportsTwopass = true
 		@videoCodec = "libvpx"
 		@audioCodec = "libvorbis"
