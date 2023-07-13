@@ -26,7 +26,7 @@ class HEVCNVENC extends Format
 
 	getFlags: =>
 		{
-			"--ovcopts-add=preset=p7",
+			"--ovcopts-add=preset=18",
 		}
 
 formats["hevc-nvenc"] = HEVCNVENC!
