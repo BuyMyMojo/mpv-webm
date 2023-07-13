@@ -154,7 +154,7 @@ class EncodeOptionsPage extends Page
 
 		-- I really dislike hardcoding this here, but, as said below, order in dicts isn't
 		-- guaranteed, and we can't use the formats dict keys.
-		formatIds = {"webm-vp9", "vp9-qsv", "av1", "av1-qsv", "avc", "avc-qsv", "avc-qsv_opus", "avc-nvenc", "hevc", "hevc-nvenc", "webm-vp8",  "raw", "utvideo-yuv420p", "utvideo-yuv422p", "utvideo-yuv444p", "mp3", "ogg", "gif"}
+		formatIds = {"webm-vp9", "vp9-qsv", "av1", "av1-qsv", "avc", "avc-qsv", "avc-qsv-opus", "avc-nvenc", "hevc", "hevc-nvenc", "webm-vp8",  "raw", "utvideo-yuv420p", "utvideo-yuv422p", "utvideo-yuv444p", "mp3", "ogg", "gif"}
 
 		formatOpts =
 			possibleValues: [{fId, formats[fId].displayName} for fId in *formatIds]
