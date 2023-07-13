@@ -16,7 +16,7 @@ formats["av1"] = AV1!
 
 class AV1QSV extends Format
 	new: =>
-		@displayName = "WebM (AV1_QSV)"
+		@displayName = "AV1_QSV"
 		@supportsTwopass = false
 		@videoCodec = "av1_qsv"
 		@audioCodec = "libopus"

@@ -51,7 +51,7 @@ class WebmVP9 extends Format
 formats["webm-vp9"] = WebmVP9!
 
 
-class WebmVP9QSV extends Format
+class VP9QSV extends Format
 	new: =>
 		@displayName = "WebM (VP9_QSV)"
 		@supportsTwopass = false
@@ -65,4 +65,4 @@ class WebmVP9QSV extends Format
 			"--ovcopts-add=preset=1",
 		}
 
-formats["vp9-qsv"] = WebmVP9QSV!
+formats["vp9-qsv"] = VP9QSV!

@@ -31,8 +31,6 @@ class AVCNVENC extends Format
 
 formats["avc-nvenc"] = AVCNVENC!
 
--- TODO: Set gpu encoders to slowest preset
-
 class AVCQSV extends Format
 	new: =>
 		@displayName = "MP4 (h264-QSV/AAC)"
