@@ -165,6 +165,7 @@ class EncodeOptionsPage extends Page
 			"avc-nvenc",
 			"hevc",
 			"hevc-nvenc",
+			"hevc-qsv",
 			"webm-vp8",
 			"raw",
 			"utvideo-yuv420p",

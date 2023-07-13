@@ -30,3 +30,20 @@ class HEVCNVENC extends Format
 		}
 
 formats["hevc-nvenc"] = HEVCNVENC!
+
+class HEVCQSV extends Format
+	new: =>
+		@displayName = "HEVC (HEVC-QSV/AAC)"
+		@supportsTwopass = true
+		@videoCodec = "hevc_nvenc"
+		@audioCodec = "aac"
+		@outputExtension = "mp4"
+		@acceptsBitrate = true
+
+	getFlags: =>
+		{
+			"--ovcopts-add=preset=1",
+			"--ovcopts-add=movflags=+faststart",
+		}
+
+formats["hevc-qsv"] = HEVCQSV!
