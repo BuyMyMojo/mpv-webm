@@ -1,6 +1,6 @@
 class AVC extends Format
 	new: =>
-		@displayName = "AVC (h264/AAC)"
+		@displayName = "AVC (x264/AAC)"
 		@supportsTwopass = true
 		@videoCodec = "libx264"
 		@audioCodec = "aac"
@@ -37,7 +37,7 @@ formats["avc-nvenc"] = AVCNVENC!
 
 class AVCQSV extends Format
 	new: =>
-		@displayName = "MP4 (h264-QSV/AAC)"
+		@displayName = "AVC (h264-QSV/AAC)"
 		@supportsTwopass = false
 		@videoCodec = "h264_qsv"
 		@audioCodec = "aac"
@@ -54,7 +54,7 @@ formats["avc-qsv"] = AVCQSV!
 
 class AVCQSVOPUS extends Format
 	new: =>
-		@displayName = "MP4 (h264-QSV/OPUS)"
+		@displayName = "AVC (h264-QSV/OPUS)"
 		@supportsTwopass = false
 		@videoCodec = "h264_qsv"
 		@audioCodec = "libopus"
