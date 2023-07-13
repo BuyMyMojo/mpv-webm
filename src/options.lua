@@ -43,21 +43,24 @@ local options = {
 	strict_audio_bitrate = 64,
 	-- Sets the output format, from a few predefined ones.
 	-- Currently we have:
-	-- av1
-	-- hevc
+	-- av1 (libaom-av1/AAC)
+	-- av1-qsv (av1_qsv/libopus)
+	-- hevc (hevc/AAC)
+	-- hevc-nvenc (hevc_nvenc/AAC)
+	-- hevc-qsv (hevc_qsv/AAC)
 	-- webm-vp9 (libvpx-vp9/libopus)
 	-- webm-vp9-qsv (vp9_qsv/libopus)
-	-- webm-vp9-qsv (av1_qsv/libopus)
-	-- mp4 (h264/AAC)
-	-- mp4-nvenc (h264-NVENC/AAC)
-	-- mp4-x264QSV_aac (h264_QSV/AAC)
-	-- mp4-x264QSV_opus (h264_QSV/libopus)
+	-- AVC (libx264/AAC)
+	-- AVC-nvenc (h264-NVENC/AAC)
+	-- AVC-x264QSV_aac (h264_QSV/AAC)
+	-- AVC-x264QSV_opus (h264_QSV/libopus)
 	-- raw (rawvideo/pcm_s16le).
 	-- utvideo-yuv420p (utvideo/pcm_s16le)
 	-- utvideo-yuv422p (utvideo/pcm_s16le)
 	-- utvideo-yuv444p (utvideo/pcm_s16le)
-	-- mp3 (libmp3lame)
+	-- aac (aac)
 	-- ogg (libopus)
+	-- mp3 (libmp3lame)
 	-- and gif
 	output_format = "webm-vp8",
 	twopass = true,
