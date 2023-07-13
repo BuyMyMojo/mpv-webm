@@ -155,6 +155,7 @@ class EncodeOptionsPage extends Page
 		-- I really dislike hardcoding this here, but, as said below, order in dicts isn't
 		-- guaranteed, and we can't use the formats dict keys.
 		formatIds = {
+			"webm-vp8",
 			"webm-vp9",
 			"vp9-qsv",
 			"av1",
@@ -166,7 +167,6 @@ class EncodeOptionsPage extends Page
 			"hevc",
 			"hevc-nvenc",
 			"hevc-qsv",
-			"webm-vp8",
 			"raw",
 			"utvideo-yuv420p",
 			"utvideo-yuv422p",
