@@ -176,7 +176,10 @@ class EncodeOptionsPage extends Page
 			"ogg",
 			"aac",
 			"mp3",
-			"wav",
+			"wav16",
+			"wav24",
+			"wav32",
+			"wav64",
 			"gif"
 		}
 
