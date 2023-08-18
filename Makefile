@@ -17,6 +17,7 @@ SOURCES += src/formats/hevc.moon
 SOURCES += src/formats/mp3.moon
 SOURCES += src/formats/ogg.moon
 SOURCES += src/formats/aac.moon
+SOURCES += src/formats/wav.moon
 SOURCES += src/formats/gif.moon
 SOURCES += src/Page.moon
 SOURCES += src/EncodeWithProgress.moon
